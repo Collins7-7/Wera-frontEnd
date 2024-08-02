@@ -10,11 +10,13 @@ import React, { useState } from 'react'
 import ProjectCard from '../project/ProjectCard'
 
 
+export const tags = ["all", "java","spring boot", "react", "nextjs", "nodejs", "mysql", "mongodb", "angular", "python", "flask", "django"]
+
 const ProjectList = () => {
 
     const [keyword, setKeyword] = useState("")
 
-    const tags = ["all", "java","spring boot", "react", "nextjs", "nodejs", "mysql", "mongodb", "angular", "python", "flask", "django"]
+   
 
     const handleFilterChange =(section, value) => {
         console.log("value", value, section)
