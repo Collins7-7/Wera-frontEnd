@@ -5,6 +5,8 @@ import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTrigger } from 
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { PlusIcon } from "@radix-ui/react-icons"
 import InviteUserForm from "./InviteUserForm"
+import ChatBox from "./ChatBox"
+import IssueList from "./IssueList"
 
 
 const ProjectDetails = () => {
@@ -19,9 +21,9 @@ const ProjectDetails = () => {
             <ScrollArea className="h-screen lg:w-[69%] pr-2">
                 <div className="text-gray-400 pb-10 w-full">
                     <h1 className="text-lg font-semibold pb-5">Create Ecommerce Website Using MERN </h1>
-                    <div className="space-y-5 pb-10 text-sm">
+                <div className="space-y-5 pb-10 text-sm">
                     <p className="w-full md:max-w-lg lg:max-w-xl text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                </div>
+                
                 <div className="flex">
                     <p className="w-36">Project Lead: </p>
                     <p>Collins Muiruri</p>
@@ -60,9 +62,25 @@ const ProjectDetails = () => {
                     <p className="w-36">Project Lead: </p>
                     <Badge>Collo</Badge>
                 </div>
+
+                </div>
+                <section className="">
+                    <p className="py-5 border-b text-lg -tracking-wider">
+                        Tasks
+                    </p>
+                    <div className="lg:flex md:flex gap-3 justify-between py-5">
+                        <IssueList status="pending" title ="Todo List"/>
+                        <IssueList status="in_progress" title ="In progress"/>
+                        <IssueList status="done" title ="Done"/>
+                        
+                    </div>
+                </section>
                 </div>
                 
             </ScrollArea>
+            <div className="lg:w-[30%] rounded-md sticky right-5 top-10">
+                <ChatBox/>
+            </div>
         </div>
     </div>
     </>
