@@ -2,7 +2,7 @@ import { useState } from "react"
 import Signup from "./Signup"
 import Login from "./Login"
 import { Button } from "@/components/ui/button"
-import "./Auth.css"
+import "./Auth.css";
 
 const Auth = () => {
     const [active, setActive] = useState(true)
