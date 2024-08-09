@@ -5,10 +5,10 @@ const initialState = {
     issues: [],
     loading: false,
     error: null,
-    IssueDetails: null
+    issueDetails: null
 }
 
-const issueReducer = (state=initialState, action) => {
+export const issueReducer = (state=initialState, action) => {
     switch (action.type) {
         case actionTypes.FETCH_ISSUES_REQUEST:
         case actionTypes.CREATE_ISSUE_REQUEST:
@@ -69,4 +69,3 @@ const issueReducer = (state=initialState, action) => {
     }
 }
 
-export default issueReducer

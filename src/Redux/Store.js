@@ -4,8 +4,9 @@ import { authReducer } from "./Auth/Reducer";
 import { projectReducer } from "./Project/Reducer";
 import ChatReducer from "./Chat/Reducer";
 import commentReducer from "./Comment/Reducer";
-import issueReducer from "./Issue/Reducer";
+
 import subscriptionReducer from "./Subscription/Reducer";
+import { issueReducer } from "./Issue/Reducer";
 
 
 const rootReducer = combineReducers({

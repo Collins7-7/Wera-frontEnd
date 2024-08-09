@@ -1,3 +1,4 @@
+import api from "@/config/api";
 import * as actionTypes from "./ActionTypes"
 
 export const fetchIssues = (id) => {
@@ -13,6 +14,46 @@ export const fetchIssues = (id) => {
         } catch (error) {
             dispatch({
                 type: actionTypes.FETCH_ISSUES_FAILURE,
+                error: error.message
+            })
+        }
+    }
+}
+
+export const createIssue = (issueData) => {
+    return async (dispatch) => {
+        dispatch({type: actionTypes.CREATE_ISSUE_REQUEST})
+        try {
+            const response = await api.post("/api/issues", issueData);
+            
+            dispatch({
+                type: actionTypes.CREATE_ISSUE_SUCCESS,
+                issue: response.data
+            })
+            console.log("Created issue successfully", response.data)
+        } catch (error) {
+            dispatch({
+                type: actionTypes.CREATE_ISSUE_FAILURE,
+                error: error.message
+            })
+        }
+    }
+}
+
+export const deleteIssue = (issueData) => {
+    return async (dispatch) => {
+        dispatch({type: actionTypes.DELETE_ISSUE_REQUEST})
+        try {
+            const response = await api.post("/api/issues", issueData);
+            
+            dispatch({
+                type: actionTypes.CREATE_ISSUE_SUCCESS,
+                issue: response.data
+            })
+            console.log("Created issue successfully", response.data)
+        } catch (error) {
+            dispatch({
+                type: actionTypes.CREATE_ISSUE_FAILURE,
                 error: error.message
             })
         }
@@ -43,7 +84,7 @@ export const updateIssueStatus =({id, status})=> {
     return async (dispatch) => {
         dispatch({type: actionTypes.UPDATE_ISSUE_STATUS_REQUEST})
         try {
-            const response = await api.PUT(`/api/issues/${id}/status/${status}`)
+            const response = await api.put(`/api/issues/${id}/status/${status}`)
             console.log("update issue status", response.data)
             dispatch({
                 type: actionTypes.UPDATE_ISSUE_STATUS_SUCCESS,

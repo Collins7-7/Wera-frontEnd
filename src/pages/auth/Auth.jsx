@@ -13,8 +13,9 @@ const Auth = () => {
                 <div className="loginBox w-full px-10 space-y-5">
                     {active? <Signup/> : <Login/>}
                     <div>
-                        <span>Already have account?</span>
-                        <Button variant="ghost" onClick={()=> setActive(!active)}>{active? "signin": "signup"}</Button>
+                      {active? <span>Already have an account?</span>: 
+                      <span>Don't have an account?</span>}  
+                        <Button className="text-base" variant="ghost" onClick={()=> setActive(!active)}>{active? "Login": "Signup"}</Button>
                     </div>
                 </div>
             </div>
