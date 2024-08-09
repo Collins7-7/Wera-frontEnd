@@ -25,7 +25,7 @@ const ProjectCard = ({item}) => {
             <div className='space-y-2'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-5'>
-                        <h1 onClick={()=> navigate(`/project/${item.id}`)} className='cursor-pointer font-bold text-lg'>
+                        <h1 onClick={()=> navigate(`/project/${item.id}`)} className='cursor-pointer font-bold text-lg hover:underline'>
                              {item.name}
 
                         </h1>
@@ -40,9 +40,9 @@ const ProjectCard = ({item}) => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
-                                <DropdownMenuItem>
+                                {/* <DropdownMenuItem>
                                     Update
-                                </DropdownMenuItem>
+                                </DropdownMenuItem> */}
                                 <DropdownMenuItem onClick={handleDelete}>
                                     Delete
                                 </DropdownMenuItem>

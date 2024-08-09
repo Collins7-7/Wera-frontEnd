@@ -19,6 +19,7 @@ const CreateCommentForm = ({issueId}) => {
 
     const onSubmit = (data)=> {
         dispatch(createComment({content: data.content, issueId}))
+        form.setValue("content", " ")
         console.log("create project data", data)
 
     }

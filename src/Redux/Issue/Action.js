@@ -40,20 +40,20 @@ export const createIssue = (issueData) => {
     }
 }
 
-export const deleteIssue = (issueData) => {
+export const deleteIssue = ({issueId}) => {
     return async (dispatch) => {
         dispatch({type: actionTypes.DELETE_ISSUE_REQUEST})
         try {
-            const response = await api.post("/api/issues", issueData);
+            const response = await api.delete(`/api/issues/${issueId}`);
             
             dispatch({
-                type: actionTypes.CREATE_ISSUE_SUCCESS,
-                issue: response.data
+                type: actionTypes.DELETE_ISSUE_SUCCESS,
+                issueId
             })
-            console.log("Created issue successfully", response.data)
+            console.log("Issue Deleted successfully")
         } catch (error) {
             dispatch({
-                type: actionTypes.CREATE_ISSUE_FAILURE,
+                type: actionTypes.DELETE_ISSUE_FAILURE,
                 error: error.message
             })
         }

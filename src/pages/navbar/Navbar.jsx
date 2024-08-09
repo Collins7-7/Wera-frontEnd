@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <div className='border-b py-4 px-5 flex items-center justify-between'>
     <div className='flex items-center gap-3'>
-        <p onClick={()=> navigate("/")} className='cursor-pointer hover:font-bold'>Wera  Manager</p>
+        <p onClick={()=> navigate("/")} className='cursor-pointer font-bold hover:text-purple-900 text-lg'>Wera  Manager</p>
 
         <Dialog>
             <DialogTrigger>
-                <Button variant="ghost"> New Project</Button>
+                <Button className="hover:font-bold" variant="ghost"> Create Project</Button>
             </DialogTrigger>
         <DialogContent>
         <DialogHeader>Create new project</DialogHeader>
