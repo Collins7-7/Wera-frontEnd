@@ -14,7 +14,6 @@ Wera-Manager is a project management web application designed specifically for s
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
@@ -74,34 +73,40 @@ Access the Application
 
 Open a browser and go to http://localhost:3000.
 
-Usage
-Registering and Logging In
+**Usage**
+*Registering and Logging In*
 1. Register with an email, username, and password.
 2. Upon registration, you will be automatically logged into the platform.
 
-Creating Projects
+*Creating Projects*
 
 1. Click on Create Project to start a new project.
 2. Use the Search Bar to quickly locate a specific project among the ones you've created.
 
-Inviting Collaborators
+*Inviting Collaborators*
 
 1. Open a specific project, then use the Email Invitation feature to invite other developers to collaborate.
 2. Invited developers can join the project upon accepting the invitation.
 
-Managing Tasks
+*Managing Tasks*
 1. Inside the project page, create tasks and assign them to team members.
 2. Update the task status as work progresses, and leave comments on tasks as needed.
-Real-Time Communication
-Use the Chatbox within each project for real-time communication with team members.
-Collaborators can also leave Comments on specific tasks for detailed discussions.
+   
+*Real-Time Communication*
+- Use the Chatbox within each project for real-time communication with team members.
+- Collaborators can also leave Comments on specific tasks for detailed discussions.
+
+**Future Enhancements**
+- *Enhanced Notifications*: Integrate in-app and email notifications for task updates and messages.
+- *Project Timeline View*: Visualize tasks and their statuses in a timeline or Gantt chart format.
+- *Advanced Task Filters*: Add filtering options for tasks by status, due dates, and assignees.
 
 **Contributing**
 We welcome contributions! To get started:
 
 **Fork the repository.**
-Create a new branch for your feature or bug fix.
-Submit a pull request for review.
+- Create a new branch for your feature or bug fix.
+- Submit a pull request for review.
 For major changes, please open an issue to discuss your ideas first.
 
 **License**
